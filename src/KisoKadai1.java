@@ -11,7 +11,7 @@ public class KisoKadai1
 
 		int x = 0;
 		int y = 0;
-		while(x <= 0 || x >100){
+		while(x <= 1 || x >100){
 			System.out.print("xを入力してください: ");
 			InputStreamReader isrx = new InputStreamReader(System.in);
 			BufferedReader brx = new BufferedReader(isrx);
