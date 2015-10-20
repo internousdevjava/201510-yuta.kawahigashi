@@ -18,6 +18,10 @@ public class KisoKadai1
 			try{
 				String bufx = brx.readLine();
 				x = Integer.parseInt(bufx);
+				if(x <= 101){
+					System.out.println("エラーです");
+					
+				}
 			}catch(Exception e){
 				System.out.println("エラーです");
 			}

@@ -62,6 +62,7 @@ public class KisoKadai2 {
 			}
 			// 継続ならansにranの値を代入しループ、終了ならループを抜けてプログラム終了
 			if (x != 1) break;
+			
 		}
 	}
 
