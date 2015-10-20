@@ -1,45 +1,60 @@
 
-	import java.io.BufferedReader;
-	import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
-	public class KisoKadai1
+public class KisoKadai1
+{
+	public static void main(String args[]) 
 	{
-		  public static void main(String args[]) 
-		  {
-			    System.out.println("‹ã‹ã‚Ì•\");
+		System.out.println("ä¹ä¹ã®è¡¨");
 
-			    int x;
-	            int y;
-	            System.out.print("x‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢: ");
-	            InputStreamReader isrx = new InputStreamReader(System.in);
-	            BufferedReader brx = new BufferedReader(isrx);
-	            try{
-	                    String bufx = brx.readLine();
-	                    x = Integer.parseInt(bufx);
-	            }catch(Exception e){
-	                    x = 0;
-	            }
-	            System.out.print("y‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢: ");
-	            InputStreamReader isry = new InputStreamReader(System.in);
-	            BufferedReader bry = new BufferedReader(isry);
-	            try{
-	                String bufy = bry.readLine();
-	                y = Integer.parseInt(bufy);
-	            }catch(Exception e){
-	                y = 0;
-	            }
-			    int kuku[][] = new int[x][y];
-			    for( int i=0; i<x; i++ ) {
-			      for( int j=0; j<y; j++ ){
-			    	  kuku[i][j] = (i+1) * (j+1);
-			      }
-			    }
-			    for( int i=0; i<x; i++ ) {
-			      for( int j=0; j<y; j++ ) { 
-			    	  System.out.print(kuku[i][j] + " "); 
-			      }
-			      	  System.out.println(); 
-			    }
-		  }
+
+		int x = 0;
+		int y = 0;
+		while(x <= 0 || x >100){
+			System.out.print("xã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ");
+			InputStreamReader isrx = new InputStreamReader(System.in);
+			BufferedReader brx = new BufferedReader(isrx);
+			try{
+				String bufx = brx.readLine();
+				x = Integer.parseInt(bufx);
+			}catch(Exception e){
+				System.out.println("ã‚¨ãƒ©ãƒ¼ã§ã™");
+			}
+		}
+		while(y <= 0 || y >100){
+			System.out.print("yã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ");
+			InputStreamReader isry = new InputStreamReader(System.in);
+			BufferedReader bry = new BufferedReader(isry);
+			try{
+				String bufy = bry.readLine();
+				y = Integer.parseInt(bufy);
+			}catch(Exception e){
+				y = 0;
+				System.out.println("ã‚¨ãƒ©ãƒ¼ã§ã™");
+			}
+		}
+		int kuku[][] = new int[x][y];
+		for( int i=0; i<x; i++ ) {
+			for( int j=0; j<y; j++ ){
+				kuku[i][j] = (i+1) * (j+1);
+			}
+		}
+		for( int i=0; i<x; i++ ) {
+			for( int j=0; j<y; j++ ) {
+				if(kuku[i][j] < 10){
+					System.out.print("    "+kuku[i][j] + " "); 
+				}else if(kuku[i][j] < 100){	
+					System.out.print("   "+ kuku[i][j] + " ");
+				}else if(kuku[i][j] < 1000){
+					System.out.print("  "+ kuku[i][j] + " ");
+				}else if(kuku[i][j] < 10000){
+					System.out.print(" " + kuku[i][j] + " ");
+				}else{
+					System.out.print(kuku[i][j] + " ");
+				}
+			}
+			System.out.println();
+		} 
 	}
-
+}
