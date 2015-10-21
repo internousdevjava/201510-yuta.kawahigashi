@@ -63,8 +63,8 @@ public class KisoKadai3 {
 									a.newLine();
 									a.close();
 								}catch(IOException e){}
-									char[] e = null;
-									System.out.println(e);
+									//char[] e = null;
+									//System.out.println(e);
 								
 								}else if(k==2){
 									System.out.println("ファイル読み込み");
